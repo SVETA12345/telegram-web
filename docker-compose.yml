@@ -1,0 +1,10 @@
+services:
+  max-web-chat:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: max-web-chat:latest
+    container_name: max-web-chat
+    ports:
+      - "8080:80"
+    restart: unless-stopped
